@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 // initialized variables
-char c;
-int i;
-long l;
+char c = 'c';
+int i = 50;
+long l = 1234567890;
 
 // initialized pointers
 char *cp = &c;
@@ -19,7 +19,17 @@ int main() {
     
     printf("value of c's pointer hex: %p \t dec: %lu\n", cp,cp);
     printf("value of i's pointer hex: %p \t dec: %lu\n", ip,ip);
-    printf("value of l's pointer hex: %p \t dec: %lu\n", lp,lp);
+    printf("value of l's pointer hex: %p \t dec: %lu\n\n", lp,lp);
+
+    printf("original value of c: %c\n", c);
+    printf("original value of i: %d\n", i);
+    printf("original value of l: %ld\n", l);
+    *cp = 'n';
+    *ip = 25;
+    *lp = 987654321;
+    printf("new value of c: %c\n", c);
+    printf("new value of i: %d\n", i);
+    printf("new value of l: %ld\n", l);
 
     return 0;
 }
