@@ -38,8 +38,11 @@ int main() {
     printf("char pointer of unsigned int: %p points to: %d\n\n",n,un);
 
     printf("unsigned int in hexadecimal: %x\n",un);
-    printf("unsigned int in unsigned int: %u\n",un);
+    printf("unsigned int in unsigned int: %u\n\n",un);
     
+    printf("individual bytes of unsigned int\n");
+    printf("decimal: %hhu %hhu %hhu %hhu\n",n,n+1,n+2,n+3);
+    printf("hexadecimal: %hhx %hhx %hhx %hhx\n",n,n+1,n+2,n+3);
 
     return 0;
 }
