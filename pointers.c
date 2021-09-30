@@ -42,7 +42,7 @@ int main() {
     
     printf("individual bytes of unsigned int: %d\n",un);
     printf("decimal: %hhu %hhu %hhu %hhu\n",*n,*(n+1),*(n+2),*(n+3));
-    printf("hexadecimal: %hhx %hhx %hhx %hhx\n",*n,*(n+1),*(n+2),*(n+3));
+    printf("hexadecimal: %hhx %hhx %hhx %hhx\n\n",*n,*(n+1),*(n+2),*(n+3));
     // *variable will get what is stored
     // b/c n is a char pointer adding 1 will move to next byte
     // chars are one byte
@@ -52,6 +52,13 @@ int main() {
         *(n+x) += 1;
     }
     printf("individual bytes of new unsigned int: %d\n", un);
+    printf("decimal: %hhu %hhu %hhu %hhu\n",*n,*(n+1),*(n+2),*(n+3));
+    printf("hexadecimal: %hhx %hhx %hhx %hhx\n\n",*n,*(n+1),*(n+2),*(n+3));
+
+    for (x = 0; x<4;x++) {
+        *(n+x) += 16;
+    }
+    printf("individual bytes of next new unsigned int: %d\n", un);
     printf("decimal: %hhu %hhu %hhu %hhu\n",*n,*(n+1),*(n+2),*(n+3));
     printf("hexadecimal: %hhx %hhx %hhx %hhx\n",*n,*(n+1),*(n+2),*(n+3));
 
