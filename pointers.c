@@ -31,7 +31,7 @@ int main() {
     printf("new value of i: %d\n", i);
     printf("new value of l: %ld\n\n", l);
 
-    unsigned int un = 123;
+    unsigned int un = 156789023;
     int *u = &un;
     char *n = &un;
     printf("int pointer of unsigned int: %p points to: %d\n",u,un);
@@ -40,12 +40,20 @@ int main() {
     printf("unsigned int in hexadecimal: %x\n",un);
     printf("unsigned int in unsigned int: %u\n\n",un);
     
-    printf("individual bytes of unsigned int\n");
+    printf("individual bytes of unsigned int: %d\n",un);
     printf("decimal: %hhu %hhu %hhu %hhu\n",*n,*(n+1),*(n+2),*(n+3));
     printf("hexadecimal: %hhx %hhx %hhx %hhx\n",*n,*(n+1),*(n+2),*(n+3));
     // *variable will get what is stored
     // b/c n is a char pointer adding 1 will move to next byte
     // chars are one byte
+
+    int x;
+    for (x = 0; x<4;x++) {
+        *(n+x) += 1;
+    }
+    printf("individual bytes of new unsigned int: %d\n", un);
+    printf("decimal: %hhu %hhu %hhu %hhu\n",*n,*(n+1),*(n+2),*(n+3));
+    printf("hexadecimal: %hhx %hhx %hhx %hhx\n",*n,*(n+1),*(n+2),*(n+3));
 
     return 0;
 }
