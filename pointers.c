@@ -29,7 +29,13 @@ int main() {
     *lp = 987654321;
     printf("new value of c: %c\n", c);
     printf("new value of i: %d\n", i);
-    printf("new value of l: %ld\n", l);
+    printf("new value of l: %ld\n\n", l);
+
+    unsigned int un = 123;
+    int *u = &un;
+    char *n = &un;
+    printf("int pointer of unsigned int: %p points to: %d\n",u,un);
+    printf("char pointer of unsigned int: %p points to: %d\n",n,un);
 
     return 0;
 }
