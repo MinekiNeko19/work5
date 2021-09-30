@@ -35,7 +35,11 @@ int main() {
     int *u = &un;
     char *n = &un;
     printf("int pointer of unsigned int: %p points to: %d\n",u,un);
-    printf("char pointer of unsigned int: %p points to: %d\n",n,un);
+    printf("char pointer of unsigned int: %p points to: %d\n\n",n,un);
+
+    printf("unsigned int in hexadecimal: %x\n",un);
+    printf("unsigned int in unsigned int: %u\n",un);
+    
 
     return 0;
 }
